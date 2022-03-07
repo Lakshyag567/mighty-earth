@@ -17,7 +17,7 @@ class CreateScheduleMessagesTable extends Migration
             $table->id();
             $table->string('message',155)->nullable();
             $table->string('mobile',155)->nullable();
-            $table->timestamp('date')->nullable();
+            $table->dateTime('date')->nullable();
             $table->bigInteger('count')->nullable()->default(0);
             $table->timestamps();
         });
