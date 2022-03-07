@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/fetch-messages','MessageController@fetch');
 Route::post('/schedule-message','MessageController@schedule');
 Route::post('/decrease-message-count','MessageController@decreaseCount');
