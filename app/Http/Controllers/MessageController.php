@@ -9,7 +9,7 @@ class MessageController extends Controller
 {
     //
     public function fetch(){
-        $data = ScheduleMessage::where('date',date('Y-m-d h:i:'.'00'))->orWhere('count','>',0)->get();
+        $data = ScheduleMessage::where(['date'=>date('Y-m-d h:i:'.'00')])->Where('count','>',0)->get();
         return $data;
     }
     public function schedule(Request $request){
